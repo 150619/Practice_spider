@@ -1,14 +1,14 @@
 import scrapy
 
 
-# name = //div[@class="main_mask"]/h2
-# time = //div[@class="main_mask"]/h3
-# describe = //div[@class="main_mask"]/p
-
+# time = //div[@class="masonry_date_block"]
 class ItcastSpider(scrapy.Spider):
     name = 'itcast'
-    allowed_domains = ['itcast.cn']
-    start_urls = ['http://itcast.cn/']
+    allowed_domains = ['www.baidu.com']
+    start_urls = ['http://www.baidu.com']
 
     def parse(self, response):
-        pass
+        # name = response.xpath('//div[@class="masonry_title_block"')
+        print('#' * 30)
+        print(type(response))
+        print('#' * 30)
